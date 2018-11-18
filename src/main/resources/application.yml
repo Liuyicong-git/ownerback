@@ -1,0 +1,18 @@
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.105.169.142:3306/managerMenu?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    username: root
+    password: ~Aa12345
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.springbootmybatisgeneratortest.pojo
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
