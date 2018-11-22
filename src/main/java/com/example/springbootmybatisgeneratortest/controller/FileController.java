@@ -62,7 +62,7 @@ public class FileController {
 		BufferedInputStream in = null;
 		BufferedOutputStream out = null;
 		try {
-			File file = new File("C:\\Users\\liuyicong\\Desktop\\file\\"  + imgname + "." + imgType);
+			File file = new File("/usr/home/local/file"  + imgname + "." + imgType);
 			in = new BufferedInputStream(new FileInputStream(file));
 			out = new BufferedOutputStream(response.getOutputStream());
 			response.setContentType(new MimetypesFileTypeMap().getContentType(file));// 设置response内容的类型

@@ -17,7 +17,8 @@ public class FileServiceImpl implements FileService{
 	public String upload(MultipartFile file ,  HttpServletRequest request) throws IllegalStateException, IOException {
 		
 		if(file!=null) {// 判断上传的文件是否为空
-			 String realPath= "C:\\Users\\liuyicong\\Desktop\\file\\"; 
+			// String realPath= "C:\\Users\\liuyicong\\Desktop\\file\\"; 
+			 String realPath = "/usr/home/local/file";
 			 String currentNum = String.valueOf(System.currentTimeMillis());
 	         String path=null;// 文件路径
 	         String type=null;// 文件类型
@@ -37,7 +38,7 @@ public class FileServiceImpl implements FileService{
 		                     // 转存文件到指定的路径
 		                     file.transferTo(new File(path));
 		                     System.out.println("文件成功上传到指定目录下");
-		                     return "http://localhost:8081/api/file/image/"+ trueFileName.replace(".","/");
+		                     return "http://47.105.169.142/api/file/image/"+ trueFileName.replace(".","/");
 		                    
 		                 }else {
 		                     System.out.println("不是我们想要的文件类型,请按要求重新上传");
