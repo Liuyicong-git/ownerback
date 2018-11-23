@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>springboot-mybatis-generator-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<artifactId>myapp</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
 
-	<name>springboot-mybatis-generator-test</name>
+	<name>myapp</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -25,20 +25,9 @@
 	</properties>
 
 	<dependencies>
-		 <!-- <dependency>
-		    <groupId>org.apache.geronimo.specs</groupId>
-		    <artifactId>geronimo-servlet_2.5_spec</artifactId>
-		    <version>1.2</version>
-		</dependency>  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<!-- <exclusions>
-		        <exclusion>
-		            <groupId>org.springframework.boot</groupId>
-		            <artifactId>spring-boot-starter-tomcat</artifactId>
-		        </exclusion>
-    		</exclusions>  -->
 		</dependency>
 
 		<dependency>

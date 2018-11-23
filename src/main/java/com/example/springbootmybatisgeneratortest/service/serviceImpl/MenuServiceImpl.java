@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import com.example.springbootmybatisgeneratortest.mapper.MenuMapper;
 import com.example.springbootmybatisgeneratortest.pojo.Menu;
 import com.example.springbootmybatisgeneratortest.pojo.MenuExample;
-import com.example.springbootmybatisgeneratortest.pojo.Result;
 import com.example.springbootmybatisgeneratortest.service.MenuService;
 
 @Service

@@ -39,7 +39,7 @@ public class ArticleController {
 	}
 	
 	@DeleteMapping
-	@RequestMapping("/update")
+	@RequestMapping("/delete")
 	public Result deleteArticle(String ids){
 		String[] idArr = ids.split(",");
 		return new Result("success" , StatusMap.CONTROLLER_BACK_SUCSSES , articleServicel.deleteArticle(idArr));

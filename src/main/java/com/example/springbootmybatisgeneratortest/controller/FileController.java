@@ -26,6 +26,9 @@ import com.example.springbootmybatisgeneratortest.pojo.Result;
 import com.example.springbootmybatisgeneratortest.pojo.StatusMap;
 import com.example.springbootmybatisgeneratortest.service.FileService;
 
+
+
+
 @RestController
 @RequestMapping("/api/file")
 public class FileController {
@@ -33,6 +36,7 @@ public class FileController {
 	
 	@Autowired
 	private FileService fileService;
+	
 	
 	@PostMapping
 	@RequestMapping("/upload")
@@ -58,11 +62,12 @@ public class FileController {
 	 */
 	@RequestMapping("/image/{imgname}/{imgType}")
 	public void getUeditorImg(@PathVariable String imgname, @PathVariable String imgType,
-			HttpServletResponse response) {
+			HttpServletResponse response , HttpServletRequest request) {
 		BufferedInputStream in = null;
 		BufferedOutputStream out = null;
 		try {
-			File file = new File("/usr/home/local/file"  + imgname + "." + imgType);
+			String filePath = "//usr//local//file//";
+			File file = new File(filePath  + imgname + "." + imgType);
 			in = new BufferedInputStream(new FileInputStream(file));
 			out = new BufferedOutputStream(response.getOutputStream());
 			response.setContentType(new MimetypesFileTypeMap().getContentType(file));// 设置response内容的类型

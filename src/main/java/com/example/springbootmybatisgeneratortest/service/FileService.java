@@ -8,6 +8,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface FileService {
 
-	public String upload(MultipartFile uploadfile , HttpServletRequest request) throws IllegalStateException, IOException;
+	public String upload(MultipartFile uploadfile ,  HttpServletRequest request) throws IllegalStateException, IOException;
 
 }
