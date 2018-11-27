@@ -21,9 +21,14 @@ public class ArticleServiceImpl implements ArticleService {
 	public List<Article> getAllArticles() {
 		ArticleExample example = new ArticleExample();
 		example.createCriteria().andIdIsNotNull();
-		return articleMapper.selectByExample(example);
+		return articleMapper.selectByExampleWithBLOBs(example);
 	}
-
+	
+	@Override
+	public Article getArticleById(Integer id) {
+		return articleMapper.selectByPrimaryKey(id);
+	}
+	
 	@Override
 	public Integer addArticle(Article article) {
 		int num = articleMapper.insertSelective(article);
@@ -47,6 +52,8 @@ public class ArticleServiceImpl implements ArticleService {
 		int num = articleMapper.deleteByExample(example);
 		return num;
 	}
+
+	
 
 	
 }

@@ -13,4 +13,6 @@ public interface ArticleService {
 	Integer updateArticle(Article article);
 	
 	Integer deleteArticle(String[] ids);
+
+	Article getArticleById(Integer id);
 }

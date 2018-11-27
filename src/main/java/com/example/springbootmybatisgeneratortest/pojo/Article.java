@@ -5,6 +5,8 @@ public class Article {
 
     private String username;
 
+    private String title;
+
     private String content;
 
     public Integer getId() {
@@ -21,6 +23,14 @@ public class Article {
 
     public void setUsername(String username) {
         this.username = username == null ? null : username.trim();
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     public String getContent() {

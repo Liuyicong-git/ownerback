@@ -18,3 +18,6 @@ server:
     uri-encoding: UTF-8
 app:
   name: myapp    
+logging:
+  level:
+    com.example.springbootmybatisgeneratortest.mapper : debug     
